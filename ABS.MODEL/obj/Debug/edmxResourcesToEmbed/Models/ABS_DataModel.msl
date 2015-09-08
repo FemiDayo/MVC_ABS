@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABS_LIFEModelStoreContainer" CdmEntityContainer="ABS_LIFE_V2DbContext">
+    <EntitySetMapping Name="TBIL_ANN_POLICY_BENEFRY">
+      <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_BENEFRY">
+        <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_BENEFRY">
+          <ScalarProperty Name="TBIL_ANN_BENF_REC_ID" ColumnName="TBIL_ANN_BENF_REC_ID" />
+          <ScalarProperty Name="TBIL_ANN_BENF_FILE_NO" ColumnName="TBIL_ANN_BENF_FILE_NO" />
+          <ScalarProperty Name="TBIL_ANN_BENF_MDLE" ColumnName="TBIL_ANN_BENF_MDLE" />
+          <ScalarProperty Name="TBIL_ANN_BENF_PROP_NO" ColumnName="TBIL_ANN_BENF_PROP_NO" />
+          <ScalarProperty Name="TBIL_ANN_BENF_BENF_COVER_ID" ColumnName="TBIL_ANN_BENF_BENF_COVER_ID" />
+          <ScalarProperty Name="TBIL_ANN_BENF_POLY_NO" ColumnName="TBIL_ANN_BENF_POLY_NO" />
+          <ScalarProperty Name="TBIL_ANN_BENF_SNO" ColumnName="TBIL_ANN_BENF_SNO" />
+          <ScalarProperty Name="TBIL_ANN_BENF_COVER_ID" ColumnName="TBIL_ANN_BENF_COVER_ID" />
+          <ScalarProperty Name="TBIL_ANN_BENF_TYPE" ColumnName="TBIL_ANN_BENF_TYPE" />
+          <ScalarProperty Name="TBIL_ANN_BENF_CAT" ColumnName="TBIL_ANN_BENF_CAT" />
+          <ScalarProperty Name="TBIL_ANN_BENF_BDATE" ColumnName="TBIL_ANN_BENF_BDATE" />
+          <ScalarProperty Name="TBIL_ANN_BENF_AGE" ColumnName="TBIL_ANN_BENF_AGE" />
+          <ScalarProperty Name="TBIL_ANN_BENF_RELATN_CD" ColumnName="TBIL_ANN_BENF_RELATN_CD" />
+          <ScalarProperty Name="TBIL_ANN_BENF_NAME" ColumnName="TBIL_ANN_BENF_NAME" />
+          <ScalarProperty Name="TBIL_ANN_BENF_PCENT" ColumnName="TBIL_ANN_BENF_PCENT" />
+          <ScalarProperty Name="TBIL_ANN_BENF_GURDN_NM" ColumnName="TBIL_ANN_BENF_GURDN_NM" />
+          <ScalarProperty Name="TBIL_ANN_BENF_ADRESS" ColumnName="TBIL_ANN_BENF_ADRESS" />
+          <ScalarProperty Name="TBIL_ANN_BENF_TAG" ColumnName="TBIL_ANN_BENF_TAG" />
+          <ScalarProperty Name="TBIL_ANN_BENF_FLAG" ColumnName="TBIL_ANN_BENF_FLAG" />
+          <ScalarProperty Name="TBIL_ANN_BENF_OPERID" ColumnName="TBIL_ANN_BENF_OPERID" />
+          <ScalarProperty Name="TBIL_ANN_BENF_KEYDTE" ColumnName="TBIL_ANN_BENF_KEYDTE" />
+          <ScalarProperty Name="TBIL_ANN_BENF_OLD_NEW" ColumnName="TBIL_ANN_BENF_OLD_NEW" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBIL_ANN_POLICY_DET">
+      <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_DET">
+        <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_DET">
+          <ScalarProperty Name="TBIL_ANN_POLY_REC_ID" ColumnName="TBIL_ANN_POLY_REC_ID" />
+          <ScalarProperty Name="TBIL_ANN_POLY_FILE_NO" ColumnName="TBIL_ANN_POLY_FILE_NO" />
+          <ScalarProperty Name="TBIL_ANN_POLY_MDLE" ColumnName="TBIL_ANN_POLY_MDLE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PROPSAL_NO" ColumnName="TBIL_ANN_POLY_PROPSAL_NO" />
+          <ScalarProperty Name="TBIL_ANN_POLY_POLICY_NO" ColumnName="TBIL_ANN_POLY_POLICY_NO" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PRDCT_CD" ColumnName="TBIL_ANN_POLY_PRDCT_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PLAN_CD" ColumnName="TBIL_ANN_POLY_PLAN_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_COVER_CD" ColumnName="TBIL_ANN_POLY_COVER_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_UNDW_YR" ColumnName="TBIL_ANN_POLY_UNDW_YR" />
+          <ScalarProperty Name="TBIL_ANN_POLY_BRANCH_CD" ColumnName="TBIL_ANN_POLY_BRANCH_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_DEPT_CD" ColumnName="TBIL_ANN_POLY_DEPT_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PRPSAL_ISSUE_DATE" ColumnName="TBIL_ANN_POLY_PRPSAL_ISSUE_DATE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PRPSAL_RECD_DT" ColumnName="TBIL_ANN_POLY_PRPSAL_RECD_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PROPSL_ACCPT_DT" ColumnName="TBIL_ANN_POLY_PROPSL_ACCPT_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PROPSL_ACCPT_STATUS" ColumnName="TBIL_ANN_POLY_PROPSL_ACCPT_STATUS" />
+          <ScalarProperty Name="TBIL_POLICY_ISSUE_DT" ColumnName="TBIL_POLICY_ISSUE_DT" />
+          <ScalarProperty Name="TBIL_POLICY_EFF_DT" ColumnName="TBIL_POLICY_EFF_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_CUST_CODE" ColumnName="TBIL_ANN_POLY_CUST_CODE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_SOURC_BIZ" ColumnName="TBIL_ANN_POLY_SOURC_BIZ" />
+          <ScalarProperty Name="TBIL_ANN_POLY_AGCY_CODE" ColumnName="TBIL_ANN_POLY_AGCY_CODE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_CD" ColumnName="TBIL_ANN_POLY_ASSRD_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_BDATE" ColumnName="TBIL_ANN_POLY_ASSRD_BDATE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_HEIGHT" ColumnName="TBIL_ANN_POLY_ASSRD_HEIGHT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_WEIGHT" ColumnName="TBIL_ANN_POLY_ASSRD_WEIGHT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_HEIGHT_TYP" ColumnName="TBIL_ANN_POLY_ASSRD_HEIGHT_TYP" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_WEIGHT_TYP" ColumnName="TBIL_ANN_POLY_ASSRD_WEIGHT_TYP" />
+          <ScalarProperty Name="TBIL_ANN_POLY_AGE_PROOF" ColumnName="TBIL_ANN_POLY_AGE_PROOF" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_AGE" ColumnName="TBIL_ANN_POLY_ASSRD_AGE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_NATIONLTY" ColumnName="TBIL_ANN_POLY_ASSRD_NATIONLTY" />
+          <ScalarProperty Name="TBIL_ANN_POLY_GENDER" ColumnName="TBIL_ANN_POLY_GENDER" />
+          <ScalarProperty Name="TBIL_ANN_POLY_MARITAL" ColumnName="TBIL_ANN_POLY_MARITAL" />
+          <ScalarProperty Name="TBIL_ANN_POLY_OCCUPATN" ColumnName="TBIL_ANN_POLY_OCCUPATN" />
+          <ScalarProperty Name="TBIL_ANN_POLY_OCCUTN_CLASS" ColumnName="TBIL_ANN_POLY_OCCUTN_CLASS" />
+          <ScalarProperty Name="TBIL_ANN_POLY_RELIGN_CD" ColumnName="TBIL_ANN_POLY_RELIGN_CD" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_RELATN" ColumnName="TBIL_ANN_POLY_ASSRD_RELATN" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ASSRD_PLACE_BIRTH" ColumnName="TBIL_ANN_POLY_ASSRD_PLACE_BIRTH" />
+          <ScalarProperty Name="TBIL_ANN_POLY_STATUS" ColumnName="TBIL_ANN_POLY_STATUS" />
+          <ScalarProperty Name="TBIL_ANN_POLY_STATUS_DATE" ColumnName="TBIL_ANN_POLY_STATUS_DATE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_WAIVER_DT" ColumnName="TBIL_ANN_POLY_WAIVER_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_PAIDUP_DT" ColumnName="TBIL_ANN_POLY_PAIDUP_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_CANCEL_DT" ColumnName="TBIL_ANN_POLY_CANCEL_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_LAPSE_DT" ColumnName="TBIL_ANN_POLY_LAPSE_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_REACTIVATE_DT" ColumnName="TBIL_ANN_POLY_REACTIVATE_DT" />
+          <ScalarProperty Name="TBIL_ANN_POLY_LAST_EMPLOYER" ColumnName="TBIL_ANN_POLY_LAST_EMPLOYER" />
+          <ScalarProperty Name="TBIL_ANN_POLY_LAST_EMPLOYER_ADRES" ColumnName="TBIL_ANN_POLY_LAST_EMPLOYER_ADRES" />
+          <ScalarProperty Name="TBIL_ANN_POLY_RETIREE_PFA" ColumnName="TBIL_ANN_POLY_RETIREE_PFA" />
+          <ScalarProperty Name="TBIL_ANN_POLY_RETIREE_PIN_NO" ColumnName="TBIL_ANN_POLY_RETIREE_PIN_NO" />
+          <ScalarProperty Name="TBIL_ANN_POLY_RETIREE_OCCUP" ColumnName="TBIL_ANN_POLY_RETIREE_OCCUP" />
+          <ScalarProperty Name="TBIL_ANN_POLY_RETIREMENT_DATE" ColumnName="TBIL_ANN_POLY_RETIREMENT_DATE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ACCOUNT_NAME" ColumnName="TBIL_ANN_POLY_ACCOUNT_NAME" />
+          <ScalarProperty Name="TBIL_ANN_POLY_ACCOUNT_NO" ColumnName="TBIL_ANN_POLY_ACCOUNT_NO" />
+          <ScalarProperty Name="TBIL_ANN_POLY_BANK_NAME" ColumnName="TBIL_ANN_POLY_BANK_NAME" />
+          <ScalarProperty Name="TBIL_ANN_POLY_BANK_ADRES" ColumnName="TBIL_ANN_POLY_BANK_ADRES" />
+          <ScalarProperty Name="TBIL_ANN_POLY_BANK_SORT_CODE" ColumnName="TBIL_ANN_POLY_BANK_SORT_CODE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_TAG" ColumnName="TBIL_ANN_POLY_TAG" />
+          <ScalarProperty Name="TBIL_ANN_POLY_FLAG" ColumnName="TBIL_ANN_POLY_FLAG" />
+          <ScalarProperty Name="TBIL_ANN_POLY_OPERID" ColumnName="TBIL_ANN_POLY_OPERID" />
+          <ScalarProperty Name="TBIL_ANN_POLY_KEYDTE" ColumnName="TBIL_ANN_POLY_KEYDTE" />
+          <ScalarProperty Name="TBIL_ANN_POLY_REF_NEW" ColumnName="TBIL_ANN_POLY_REF_NEW" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBIL_ANN_POLICY_PREM_INFO">
+      <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_PREM_INFO">
+        <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_PREM_INFO">
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FILE_NO" ColumnName="TBIL_ANN_POL_PRM_FILE_NO" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_REC_ID" ColumnName="TBIL_ANN_POL_PRM_REC_ID" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_MDLE" ColumnName="TBIL_ANN_POL_PRM_MDLE" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_PROP_NO" ColumnName="TBIL_ANN_POL_PRM_PROP_NO" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_POLY_NO" ColumnName="TBIL_ANN_POL_PRM_POLY_NO" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_PRDCT_CD" ColumnName="TBIL_ANN_POL_PRM_PRDCT_CD" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_PLAN_CD" ColumnName="TBIL_ANN_POL_PRM_PLAN_CD" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_PERIOD_YRS" ColumnName="TBIL_ANN_POL_PRM_PERIOD_YRS" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FROM" ColumnName="TBIL_ANN_POL_PRM_FROM" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_TO" ColumnName="TBIL_ANN_POL_PRM_TO" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_CURRCY" ColumnName="TBIL_ANN_POL_PRM_CURRCY" />
+          <ScalarProperty Name="TBIL_ANN_POL_PURCHASE_LC" ColumnName="TBIL_ANN_POL_PURCHASE_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PURCHASE_FC" ColumnName="TBIL_ANN_POL_PURCHASE_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PREM_WITH_LS_LC" ColumnName="TBIL_ANN_POL_PREM_WITH_LS_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PREM_WITH_LS_FC" ColumnName="TBIL_ANN_POL_PREM_WITH_LS_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PREM_WITHOUT_LS_LC" ColumnName="TBIL_ANN_POL_PREM_WITHOUT_LS_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PREM_WITHOUT_LS_FC" ColumnName="TBIL_ANN_POL_PREM_WITHOUT_LS_FC" />
+          <ScalarProperty Name="TBIL_ANN_ANNUAL_LC" ColumnName="TBIL_ANN_ANNUAL_LC" />
+          <ScalarProperty Name="TBIL_ANN_ANNUAL_FC" ColumnName="TBIL_ANN_ANNUAL_FC" />
+          <ScalarProperty Name="TBIL_ANN_MONTHLY_LC" ColumnName="TBIL_ANN_MONTHLY_LC" />
+          <ScalarProperty Name="TBIL_ANN_MONTHLY_FC" ColumnName="TBIL_ANN_MONTHLY_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_ANN_CONTRIB_LC" ColumnName="TBIL_ANN_POL_PRM_ANN_CONTRIB_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_ANN_CONTRIB_FC" ColumnName="TBIL_ANN_POL_PRM_ANN_CONTRIB_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_MTH_CONTRIB_LC" ColumnName="TBIL_ANN_POL_PRM_MTH_CONTRIB_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_MTH_CONTRIB_FC" ColumnName="TBIL_ANN_POL_PRM_MTH_CONTRIB_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_LIFE_COVER" ColumnName="TBIL_ANN_POL_PRM_LIFE_COVER" />
+          <ScalarProperty Name="TBIL_ANN_POL_SA_FROM_PRM" ColumnName="TBIL_ANN_POL_SA_FROM_PRM" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_SA_LC" ColumnName="TBIL_ANN_POL_PRM_SA_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_SA_FC" ColumnName="TBIL_ANN_POL_PRM_SA_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_LIFE_COVER_SA_LC" ColumnName="TBIL_ANN_POL_PRM_LIFE_COVER_SA_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_LIFE_COVER_SA_FC" ColumnName="TBIL_ANN_POL_PRM_LIFE_COVER_SA_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FREE_COV_LMT_LC" ColumnName="TBIL_ANN_POL_PRM_FREE_COV_LMT_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FREE_COV_LMT_FC" ColumnName="TBIL_ANN_POL_PRM_FREE_COV_LMT_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_MODE_PAYT" ColumnName="TBIL_ANN_POL_PRM_MODE_PAYT" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RT_TAB_FIX" ColumnName="TBIL_ANN_POL_PRM_RT_TAB_FIX" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RT_FIXED" ColumnName="TBIL_ANN_POL_PRM_RT_FIXED" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RT_FIX_PER" ColumnName="TBIL_ANN_POL_PRM_RT_FIX_PER" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RATE_CD" ColumnName="TBIL_ANN_POL_PRM_RATE_CD" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RATE" ColumnName="TBIL_ANN_POL_PRM_RATE" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RATE_PER" ColumnName="TBIL_ANN_POL_PRM_RATE_PER" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_NO_INSTAL" ColumnName="TBIL_ANN_POL_PRM_NO_INSTAL" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_MOP_RATE" ColumnName="TBIL_ANN_POL_PRM_MOP_RATE" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_EXCHG_RATE" ColumnName="TBIL_ANN_POL_PRM_EXCHG_RATE" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_DISCNT_PCENT" ColumnName="TBIL_ANN_POL_PRM_DISCNT_PCENT" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_LOAD_PCENT" ColumnName="TBIL_ANN_POL_PRM_LOAD_PCENT" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_LC" ColumnName="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_LC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_FC" ColumnName="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_FC" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RT_APPLIED_ON" ColumnName="TBIL_ANN_POL_PRM_RT_APPLIED_ON" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_RT_BONUS_CD" ColumnName="TBIL_ANN_POL_PRM_RT_BONUS_CD" />
+          <ScalarProperty Name="TBIL_ANN_POL_ANNUITY_PAYT_START" ColumnName="TBIL_ANN_POL_ANNUITY_PAYT_START" />
+          <ScalarProperty Name="TBIL_ANN_POL_ANNUITY_MOP" ColumnName="TBIL_ANN_POL_ANNUITY_MOP" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_GUARANTEE_PERIOD_YRS" ColumnName="TBIL_ANN_POL_PRM_GUARANTEE_PERIOD_YRS" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_ANNUAL_PCENT_PYMT_INCREASE" ColumnName="TBIL_ANN_POL_PRM_ANNUAL_PCENT_PYMT_INCREASE" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_DEATH_BENEFIT_ANNUAL_FACTOR" ColumnName="TBIL_ANN_POL_PRM_DEATH_BENEFIT_ANNUAL_FACTOR" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_ALLOC_CD" ColumnName="TBIL_ANN_POL_PRM_ALLOC_CD" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_SCH_TERM" ColumnName="TBIL_ANN_POL_PRM_SCH_TERM" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FEE_PRD" ColumnName="TBIL_ANN_POL_PRM_FEE_PRD" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_ENROL_NO" ColumnName="TBIL_ANN_POL_PRM_ENROL_NO" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_TAG" ColumnName="TBIL_ANN_POL_PRM_TAG" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_FLAG" ColumnName="TBIL_ANN_POL_PRM_FLAG" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_OPERID" ColumnName="TBIL_ANN_POL_PRM_OPERID" />
+          <ScalarProperty Name="TBIL_ANN_POL_PRM_KEYDTE" ColumnName="TBIL_ANN_POL_PRM_KEYDTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbil_CUST_detail">
+      <EntityTypeMapping TypeName="ABS_LIFEModel.tbil_CUST_detail">
+        <MappingFragment StoreEntitySet="tbil_CUST_detail">
+          <ScalarProperty Name="TBIL_CUST_OLD_NEW" ColumnName="TBIL_CUST_OLD_NEW" />
+          <ScalarProperty Name="TBIL_CUST_KEYDTE" ColumnName="TBIL_CUST_KEYDTE" />
+          <ScalarProperty Name="TBIL_CUST_OPERID" ColumnName="TBIL_CUST_OPERID" />
+          <ScalarProperty Name="TBIL_CUST_FLAG" ColumnName="TBIL_CUST_FLAG" />
+          <ScalarProperty Name="TBIL_CUST_TAG" ColumnName="TBIL_CUST_TAG" />
+          <ScalarProperty Name="TBIL_CUST_STAFF_YN" ColumnName="TBIL_CUST_STAFF_YN" />
+          <ScalarProperty Name="TBIL_CUST_EMAIL2" ColumnName="TBIL_CUST_EMAIL2" />
+          <ScalarProperty Name="TBIL_CUST_EMAIL1" ColumnName="TBIL_CUST_EMAIL1" />
+          <ScalarProperty Name="TBIL_CUST_PHONE2" ColumnName="TBIL_CUST_PHONE2" />
+          <ScalarProperty Name="TBIL_CUST_PHONE1" ColumnName="TBIL_CUST_PHONE1" />
+          <ScalarProperty Name="TBIL_CUST_ADRES2" ColumnName="TBIL_CUST_ADRES2" />
+          <ScalarProperty Name="TBIL_CUST_ADRES1" ColumnName="TBIL_CUST_ADRES1" />
+          <ScalarProperty Name="TBIL_CUST_BRANCH" ColumnName="TBIL_CUST_BRANCH" />
+          <ScalarProperty Name="TBIL_CUST_SOURCE_BIZ" ColumnName="TBIL_CUST_SOURCE_BIZ" />
+          <ScalarProperty Name="TBIL_CUST_OCCUP_CODE" ColumnName="TBIL_CUST_OCCUP_CODE" />
+          <ScalarProperty Name="TBIL_CUST_SHRT_DESC" ColumnName="TBIL_CUST_SHRT_DESC" />
+          <ScalarProperty Name="TBIL_CUST_DESC" ColumnName="TBIL_CUST_DESC" />
+          <ScalarProperty Name="TBIL_CUST_MDLE" ColumnName="TBIL_CUST_MDLE" />
+          <ScalarProperty Name="TBIL_CUST_CATG" ColumnName="TBIL_CUST_CATG" />
+          <ScalarProperty Name="TBIL_CUST_REC_ID" ColumnName="TBIL_CUST_REC_ID" />
+          <ScalarProperty Name="TBIL_CUST_CODE" ColumnName="TBIL_CUST_CODE" />
+          <ScalarProperty Name="TBIL_CUST_ID" ColumnName="TBIL_CUST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbil_ins_detail">
+      <EntityTypeMapping TypeName="ABS_LIFEModel.tbil_ins_detail">
+        <MappingFragment StoreEntitySet="tbil_ins_detail">
+          <ScalarProperty Name="TBIL_INSRD_OLD_NEW" ColumnName="TBIL_INSRD_OLD_NEW" />
+          <ScalarProperty Name="TBIL_INSRD_KEYDTE" ColumnName="TBIL_INSRD_KEYDTE" />
+          <ScalarProperty Name="TBIL_INSRD_OPERID" ColumnName="TBIL_INSRD_OPERID" />
+          <ScalarProperty Name="TBIL_INSRD_FLAG" ColumnName="TBIL_INSRD_FLAG" />
+          <ScalarProperty Name="TBIL_INSRD_TAG" ColumnName="TBIL_INSRD_TAG" />
+          <ScalarProperty Name="TBIL_INSRD_BRNCH_CODE" ColumnName="TBIL_INSRD_BRNCH_CODE" />
+          <ScalarProperty Name="TBIL_INSRD_PAY_MODE" ColumnName="TBIL_INSRD_PAY_MODE" />
+          <ScalarProperty Name="TBIL_INSRD_SOURCE_BIZ" ColumnName="TBIL_INSRD_SOURCE_BIZ" />
+          <ScalarProperty Name="TBIL_INSRD_OCCUP_CODE" ColumnName="TBIL_INSRD_OCCUP_CODE" />
+          <ScalarProperty Name="TBIL_INSRD_CR_LIMIT" ColumnName="TBIL_INSRD_CR_LIMIT" />
+          <ScalarProperty Name="TBIL_INSRD_EMAIL2" ColumnName="TBIL_INSRD_EMAIL2" />
+          <ScalarProperty Name="TBIL_INSRD_EMAIL1" ColumnName="TBIL_INSRD_EMAIL1" />
+          <ScalarProperty Name="TBIL_INSRD_PHONE2" ColumnName="TBIL_INSRD_PHONE2" />
+          <ScalarProperty Name="TBIL_INSRD_PHONE1" ColumnName="TBIL_INSRD_PHONE1" />
+          <ScalarProperty Name="TBIL_INSRD_ADRES2" ColumnName="TBIL_INSRD_ADRES2" />
+          <ScalarProperty Name="TBIL_INSRD_ADRES1" ColumnName="TBIL_INSRD_ADRES1" />
+          <ScalarProperty Name="TBIL_INSRD_FIRSTNAME" ColumnName="TBIL_INSRD_FIRSTNAME" />
+          <ScalarProperty Name="TBIL_INSRD_SURNAME" ColumnName="TBIL_INSRD_SURNAME" />
+          <ScalarProperty Name="TBIL_INSRD_CLASS" ColumnName="TBIL_INSRD_CLASS" />
+          <ScalarProperty Name="TBIL_INSRD_MDLE" ColumnName="TBIL_INSRD_MDLE" />
+          <ScalarProperty Name="TBIL_INSRD_REC_ID" ColumnName="TBIL_INSRD_REC_ID" />
+          <ScalarProperty Name="TBIL_INSRD_CODE" ColumnName="TBIL_INSRD_CODE" />
+          <ScalarProperty Name="TBIL_INSRD_ID" ColumnName="TBIL_INSRD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

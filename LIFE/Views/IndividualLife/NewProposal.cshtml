@@ -1,0 +1,47 @@
+﻿@model ABS.MODEL.Proposal
+@{
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+    ViewBag.Title = "New Proposal";
+}
+
+<h2>New Proposal</h2>
+<hr />
+<div id="topMenuDiv" class="bg-danger">
+    Top menu here
+</div>
+<p>
+    &nbsp;
+</p>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="row">*@
+            <div class="form-group form-group-sm">
+                @Html.LabelFor(model => model.FileNumber, "File Number", htmlAttributes: new { @class = "control-label col-xs-3" })
+
+                <div class="col-xs-3">
+                    @Html.EditorFor(model => model.FileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FileNumber, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.FileNumber, "File Number", htmlAttributes: new { @class = "control-label col-xs-3" })
+
+                <div class="col-xs-3">
+                    @Html.EditorFor(model => model.FileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FileNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        @*</div>*@
+
+
+
+    </div>
+}
+
+
+
+
+

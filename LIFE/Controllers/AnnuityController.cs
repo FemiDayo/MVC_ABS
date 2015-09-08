@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ABS.MODEL.Models;
+
+namespace LIFE.Controllers
+{
+    public class AnnuityController : Controller
+    {
+        // GET: Annuity
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        // GET: Annuity/PolicyEntry
+        //[HttpGet]
+        public ActionResult ProposalEntry()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ProposalEntry(FormCollection frmCollection)
+        {
+            return View();
+        }
+
+
+
+
+
+        // GET: Annuity/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Annuity/Create
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Annuity/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: Annuity/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add update logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Annuity/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Annuity/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+﻿@model ABS.MODEL.Proposal
+@{
+    ViewBag.Title = "Proposal Entry";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+
+<h2>Proposal Entry</h2>
+
+<hr />
+<div id="topMenuDiv" class="bg-danger">
+    Top menu here
+</div>
+<p>
+    &nbsp;
+</p>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <table id="propTbl" class="table table-responsive table-hover form-group-sm">
+        <tr>
+            <td class="tdLbl">
+                <input type="checkbox" id="cbxFileNumber" class="" />
+                @Html.LabelFor(model => model.FileNumber, "File Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.FileNumber, new { htmlAttributes = new { @class = "form-control input-sm textInputMini", @disabled = "disabled" } })
+                    <a href="javascript:void()" id="getRecordBtn" class="btn btn-info btn-xs disabled" >Get Record</a>
+                    @Html.ValidationMessageFor(model => model.FileNumber, "", new { @class = "text-danger" })
+                </div>
+
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.PolicyNumber, "Policy Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+
+                @Html.EditorFor(model => model.PolicyNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PolicyNumber, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.ProposalNumber, "Proposal Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.ProposalNumber, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.ProposalNumber, "", new { @class = "text-danger" })
+
+            </td>
+            <td>
+                @Html.LabelFor(model => model.PlanCode, "Plan/Cover Code", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm textInputMidi" } })
+                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm textInputMidi" } })
+                    @Html.ValidationMessageFor(model => model.FileNumber, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+                </div>
+               
+            </td>
+        </tr>
+    </table>
+
+
+}
