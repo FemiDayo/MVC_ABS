@@ -18,5 +18,12 @@ namespace ABS.MODEL.Models
         }
 
 
+
+
+
+        public string BusinessSourceInfoFlag { get; set; }
+        public string AddedBy { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime DateModified { get; set; }
     }
 }

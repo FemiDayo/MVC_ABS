@@ -208,6 +208,9 @@ textarea {
     /*margin-top: 5px !important;*/
 }
 
+.textInputMax {
+     width: 400px !important;
+}
 .textInputMini {
     width: 180px !important;
 }

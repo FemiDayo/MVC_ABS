@@ -1,10 +1,10 @@
 ﻿@model ABS.MODEL.Proposal
 @{
-    ViewBag.Title = "Proposal Entry";
+    ViewBag.Title = "Annuity - Proposal Entry";
     Layout = "~/Views/Shared/_CommonLayout.cshtml";
 }
 
-<h2>Annuity - Proposal Entry</h2>
+<h2>@ViewBag.Title</h2>
 
 
 <hr />
@@ -62,31 +62,31 @@
         </tr>
         <tr>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.UnderWritingYear, "UnderWriting Year", htmlAttributes: new {@class = "control-label"})
+                @Html.LabelFor(model => model.UnderWritingYear, "UnderWriting Year", htmlAttributes: new { @class = "control-label" })
             </td>
             <td>
-                @Html.EditorFor(model => model.UnderWritingYear, new {htmlAttributes = new {@class = "form-control input-sm"}})
-                @Html.ValidationMessageFor(model => model.UnderWritingYear, "", new {@class = "text-danger"})
+                @Html.EditorFor(model => model.UnderWritingYear, new { htmlAttributes = new { @class = "form-control input-sm textInputMini" } })
+                @Html.ValidationMessageFor(model => model.UnderWritingYear, "", new { @class = "text-danger" })
             </td>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.BusinessSource, "Proposal Number", htmlAttributes: new {@class = "control-label"})
+                @Html.LabelFor(model => model.BusinessSource, "Business Source", htmlAttributes: new { @class = "control-label" })
             </td>
             <td>
-                @Html.EditorFor(model => model.BusinessSource, new {htmlAttributes = new {@class = "form-control input-sm"}})
-                @Html.ValidationMessageFor(model => model.BusinessSource, "", new {@class = "text-danger"})
+                @Html.EditorFor(model => model.BusinessSource, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.BusinessSource, "", new { @class = "text-danger" })
             </td>
         </tr>
 
         <tr>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.ProdeuctCategory, "UnderWriting Year", htmlAttributes: new { @class = "control-label" })
+                @Html.LabelFor(model => model.ProductCategory, "Product Category", htmlAttributes: new { @class = "control-label" })
             </td>
             <td>
-                @Html.EditorFor(model => model.ProdeuctCategory, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                @Html.ValidationMessageFor(model => model.ProdeuctCategory, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.ProductCategory, new { htmlAttributes = new { @class = "form-control input-sm", @placeholder = "Annuity" } })
+                @Html.ValidationMessageFor(model => model.ProductCategory, "", new { @class = "text-danger" })
             </td>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.ProductCode, "Proposal Number", htmlAttributes: new { @class = "control-label" })
+                @Html.LabelFor(model => model.ProductCode, "Product Code", htmlAttributes: new { @class = "control-label" })
             </td>
             <td>
                 @Html.EditorFor(model => model.ProductCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
@@ -95,14 +95,339 @@
         </tr>
         <tr>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.CoverCode, "UnderWriting Year", htmlAttributes: new { @class = "control-label" })
+                @Html.LabelFor(model => model.CoverCode, "Cover Code", htmlAttributes: new { @class = "control-label" })
             </td>
             <td>
                 @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
                 @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
             </td>
             <td class="tdLbl">
-                @Html.LabelFor(model => model.PlanCode, "Proposal Number", htmlAttributes: new { @class = "control-label" })
+                @Html.LabelFor(model => model.PlanCode, "Plan Code", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Broker Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtBrokerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Marketer Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtMarketerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchMarketer" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupMarketer" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Assured Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtInsuredName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Nationality</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Occupation Class</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Assured Occupation</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Gender</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Male", Value = "M"},
+                    new SelectListItem {Text = "Female", Value = "F"}
+                }, new
+                {
+                    @id = "gender",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Marital Status</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Married", Value = "M"},
+                    new SelectListItem {Text = "Single", Value = "S"}
+                }, new
+                {
+                    @id = "maritalStatus",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Date Of Birth</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text" } })
+                    <span class="label label-success">dd/mm/yyyy</span>
+                    @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+
+                </div>
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Age (ANB)</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Place Of Birth</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Proof Of Age</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Driver's Licence", Value = "D"},
+                    new SelectListItem {Text = "Passport", Value = "P"},
+                    new SelectListItem {Text = "National ID", Value = "N"},
+                    new SelectListItem {Text = "Voter's Card", Value = "V"}
+                }, new
+                {
+                    @id = "proofOfAge",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Religion/Belief</label>
+            </td>
+            <td colspan="3">
+                @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Christianity", Value = "C"},
+                    new SelectListItem {Text = "Islam", Value = "I"},
+                     new SelectListItem {Text = "Others", Value = "O"}
+                }, new
+                {
+                    @id = "religionBelief",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Height</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;" } })
+                    @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Feet", Value = "F"},
+                    new SelectListItem {Text = "Meter", Value = "M"}
+                }, new
+                {
+                    @id = "height",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                    @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+                </div>
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Weight</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;" } })
+                    @Html.DropDownListFor(model => model.BrokerCode, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Kilo", Value = "K"},
+                    new SelectListItem {Text = "Pound", Value = "P"}
+                }, new
+                {
+                    @id = "weight",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                    @Html.ValidationMessageFor(model => model.BrokerCode, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">BUSINESS SOURCE INFO</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Branch</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Department</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Proposal Status</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">RETIREMENT/RETIREE INFO</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Last Employer</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.CoverCode, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Last Emp. Address</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.PlanCode, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td>
+                <label class="control-label">PFA Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtBrokerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.BrokerCode, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Last Occupation</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Bank Name</label>
             </td>
             <td>
                 @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
@@ -110,29 +435,97 @@
             </td>
         </tr>
 
-
-        @*<tr>
-            <td>
-                @Html.LabelFor(model => model.ProposalNumber, "Proposal Number", htmlAttributes: new { @class = "control-label" })
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Bank A/C Name</label>
             </td>
             <td>
-                @Html.EditorFor(model => model.ProposalNumber, new { htmlAttributes = new { @class = "form-control input-sm" } })
-                @Html.ValidationMessageFor(model => model.ProposalNumber, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
 
             </td>
+            <td class="tdLbl">
+                <label class="control-label">Account No</label>
+            </td>
             <td>
-                @Html.LabelFor(model => model.PlanCode, "Plan/Cover Code", htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Bank Short Code</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Bank Address</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.PlanCode, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Retirement Date</label>
             </td>
             <td>
                 <div class="form-inline">
-                    @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm textInputMidi" } })
-                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm textInputMidi" } })
-                    @Html.ValidationMessageFor(model => model.FileNumber, "", new { @class = "text-danger" })
-                    @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.CoverCode, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text" } })
+                    <span class="label label-success">dd/mm/yyyy</span>
                 </div>
+                @Html.ValidationMessageFor(model => model.CoverCode, "", new { @class = "text-danger" })
 
             </td>
-        </tr>*@
+            <td class="tdLbl">
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">OTHER INFO</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">
+                    Other Reference No
+                </label>
+            </td>
+            <td colspan="3">
+                @Html.EditorFor(model => model.PlanCode, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.PlanCode, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="">
+            <td colspan="2" align="left">
+                <button class="btn btn-info btn-sm">
+                    Clear Fields
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Save Entry" class="btn btn-info btn-sm" />
+            </td>
+            <td colspan="2" align="right">
+                @*<button class="btn btn-info btn-sm">
+                    Clear Fields
+                </button>*@
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="@Url.Content("~/")" class="btn btn-info btn-sm">
+                    Next
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </a>
+            </td>
+        </tr>
     </table>
 
 

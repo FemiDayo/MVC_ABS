@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIFE", "LIFE\LIFE.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABS.MODEL", "ABS.MODEL\ABS.MODEL.csproj", "{04374D30-850B-41BD-B38C-BEDD258C64B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ANNUITY", "ANNUITY\ANNUITY.csproj", "{01BB1A29-22F5-4DD5-8E5C-8046249D3671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{04374D30-850B-41BD-B38C-BEDD258C64B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04374D30-850B-41BD-B38C-BEDD258C64B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04374D30-850B-41BD-B38C-BEDD258C64B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BB1A29-22F5-4DD5-8E5C-8046249D3671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BB1A29-22F5-4DD5-8E5C-8046249D3671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BB1A29-22F5-4DD5-8E5C-8046249D3671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BB1A29-22F5-4DD5-8E5C-8046249D3671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

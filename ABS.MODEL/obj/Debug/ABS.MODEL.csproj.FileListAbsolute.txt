@@ -7,4 +7,3 @@ C:\MVC_SOLUTIONS\MVC_ABS\ABS.MODEL\bin\Debug\EntityFramework.dll
 C:\MVC_SOLUTIONS\MVC_ABS\ABS.MODEL\bin\Debug\EntityFramework.SqlServer.dll
 C:\MVC_SOLUTIONS\MVC_ABS\ABS.MODEL\bin\Debug\EntityFramework.xml
 C:\MVC_SOLUTIONS\MVC_ABS\ABS.MODEL\bin\Debug\EntityFramework.SqlServer.xml
-C:\MVC_SOLUTIONS\MVC_ABS\ABS.MODEL\obj\Debug\ABS.MODEL.csprojResolveAssemblyReference.cache

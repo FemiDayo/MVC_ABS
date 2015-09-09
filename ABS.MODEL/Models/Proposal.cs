@@ -14,7 +14,7 @@ namespace ABS.MODEL
         public string UnderWritingYear { get; set; }
         public string BusinessSource { get; set; }
         public DateTime ProposalDate { get; set; }
-        public string ProdeuctCategory { get; set; }
+        public string ProductCategory { get; set; }
         public string ProductCode { get; set; }
         public string CoverCode { get; set; }
         public string PlanCode { get; set; }
