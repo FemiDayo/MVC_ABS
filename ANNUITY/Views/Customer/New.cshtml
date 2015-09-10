@@ -1,0 +1,36 @@
+﻿@model ABS.MODEL.Models.tbil_CUST_detail
+@{
+    ViewBag.Title = "Annuity - Add New Customer";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+<div id="topMenuDiv" class="bg-danger">
+    Top menu here
+</div>
+<p>
+    &nbsp;
+</p>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <table id="CustomerTbl" class="table table-responsive table-hover form-group-sm">
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">
+                    Record ID
+                </label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_CUST_REC_ID, new { htmlAttributes = new { @class = "form-control input-sm textInputMini", @disabled = "disabled" } })
+
+                </div>
+            </td>
+        </tr>
+       
+    </table>
+}
