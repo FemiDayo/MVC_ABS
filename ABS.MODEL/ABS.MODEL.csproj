@@ -50,6 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ABSDbContext.cs" />
+    <Compile Include="Models\ABS_MVC_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABS_MVC_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ABS_MVC_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ABS_MVC_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABS_MVC_Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AnnuityProposal.cs" />
     <Compile Include="Models\Beneficiary.cs" />
     <Compile Include="Models\BusinessSourceInfo.cs" />
@@ -62,11 +77,43 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Proposal.cs" />
+    <Compile Include="Models\TBIL_ANN_POLICY_BENEFRY.cs">
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TBIL_ANN_POLICY_DET.cs">
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TBIL_ANN_POLICY_PREM_INFO.cs">
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbil_CUST_detail.cs">
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbil_ins_detail.cs">
+      <DependentUpon>ABS_MVC_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Models\ABS_MVC_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ABS_MVC_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ABS_MVC_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ABS_MVC_Model.edmx</DependentUpon>
+      <LastGenOutput>ABS_MVC_Model.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\ABS_MVC_Model.edmx.diagram">
+      <DependentUpon>ABS_MVC_Model.edmx</DependentUpon>
+    </None>
+    <None Include="Models\ABS_MVC_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ABS_MVC_Model.edmx</DependentUpon>
+      <LastGenOutput>ABS_MVC_Model.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

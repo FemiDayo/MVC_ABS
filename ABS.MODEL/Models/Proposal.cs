@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ABS.MODEL
+namespace ABS.MODEL.Models
 {
     public class Proposal
     {

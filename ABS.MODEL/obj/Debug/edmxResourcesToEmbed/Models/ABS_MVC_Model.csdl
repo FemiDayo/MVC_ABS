@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABS_LIFEDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBIL_ANN_POLICY_BENEFRY">
+    <Key>
+      <PropertyRef Name="TBIL_ANN_BENF_REC_ID" />
+      <PropertyRef Name="TBIL_ANN_BENF_FILE_NO" />
+    </Key>
+    <Property Name="TBIL_ANN_BENF_REC_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TBIL_ANN_BENF_FILE_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TBIL_ANN_BENF_MDLE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_PROP_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_BENF_COVER_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_POLY_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_SNO" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TBIL_ANN_BENF_COVER_ID" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="TBIL_ANN_BENF_TYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_CAT" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_BDATE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_BENF_AGE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_RELATN_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_PCENT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TBIL_ANN_BENF_GURDN_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_ADRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_TAG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_ANN_BENF_KEYDTE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_BENF_OLD_NEW" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBIL_ANN_POLICY_DET">
+    <Key>
+      <PropertyRef Name="TBIL_ANN_POLY_REC_ID" />
+      <PropertyRef Name="TBIL_ANN_POLY_FILE_NO" />
+    </Key>
+    <Property Name="TBIL_ANN_POLY_REC_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TBIL_ANN_POLY_FILE_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TBIL_ANN_POLY_MDLE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_PROPSAL_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_POLICY_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_PRDCT_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_PLAN_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_COVER_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_UNDW_YR" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_BRANCH_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_DEPT_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_PRPSAL_ISSUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_PRPSAL_RECD_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_PROPSL_ACCPT_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_PROPSL_ACCPT_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_POLICY_ISSUE_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_POLICY_EFF_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_CUST_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_SOURC_BIZ" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_AGCY_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_BDATE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_HEIGHT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_WEIGHT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_HEIGHT_TYP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_WEIGHT_TYP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_AGE_PROOF" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_AGE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_NATIONLTY" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_GENDER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_MARITAL" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_OCCUPATN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_OCCUTN_CLASS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_RELIGN_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_RELATN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ASSRD_PLACE_BIRTH" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_STATUS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_WAIVER_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_PAIDUP_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_CANCEL_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_LAPSE_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_REACTIVATE_DT" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_LAST_EMPLOYER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_LAST_EMPLOYER_ADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_RETIREE_PFA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_RETIREE_PIN_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_RETIREE_OCCUP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_RETIREMENT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_ACCOUNT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_ACCOUNT_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_BANK_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_BANK_ADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_BANK_SORT_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_TAG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POLY_KEYDTE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POLY_REF_NEW" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBIL_ANN_POLICY_PREM_INFO">
+    <Key>
+      <PropertyRef Name="TBIL_ANN_POL_PRM_FILE_NO" />
+    </Key>
+    <Property Name="TBIL_ANN_POL_PRM_FILE_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TBIL_ANN_POL_PRM_REC_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TBIL_ANN_POL_PRM_MDLE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_PROP_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_POLY_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_PRDCT_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_PLAN_CD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_PERIOD_YRS" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_FROM" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POL_PRM_TO" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POL_PRM_CURRCY" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PURCHASE_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PURCHASE_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PREM_WITH_LS_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PREM_WITH_LS_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PREM_WITHOUT_LS_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PREM_WITHOUT_LS_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_ANNUAL_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_ANNUAL_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_MONTHLY_LC" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="TBIL_ANN_MONTHLY_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_ANN_CONTRIB_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_ANN_CONTRIB_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_MTH_CONTRIB_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_MTH_CONTRIB_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_LIFE_COVER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_SA_FROM_PRM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_SA_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_SA_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_LIFE_COVER_SA_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_LIFE_COVER_SA_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_FREE_COV_LMT_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_FREE_COV_LMT_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_MODE_PAYT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_RT_TAB_FIX" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_RT_FIXED" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TBIL_ANN_POL_PRM_RT_FIX_PER" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_RATE_CD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_RATE_PER" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_NO_INSTAL" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_MOP_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_EXCHG_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_DISCNT_PCENT" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_LOAD_PCENT" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_LC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_FREE_LIFECOVER_LMT_FC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_RT_APPLIED_ON" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_RT_BONUS_CD" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_ANNUITY_PAYT_START" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_ANN_POL_ANNUITY_MOP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_GUARANTEE_PERIOD_YRS" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_ANNUAL_PCENT_PYMT_INCREASE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_DEATH_BENEFIT_ANNUAL_FACTOR" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="TBIL_ANN_POL_PRM_ALLOC_CD" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_SCH_TERM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_FEE_PRD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TBIL_ANN_POL_PRM_ENROL_NO" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TBIL_ANN_POL_PRM_TAG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TBIL_ANN_POL_PRM_KEYDTE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ABS_LIFEDbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBIL_ANN_POLICY_BENEFRY" EntityType="Self.TBIL_ANN_POLICY_BENEFRY" />
+    <EntitySet Name="TBIL_ANN_POLICY_DET" EntityType="Self.TBIL_ANN_POLICY_DET" />
+    <EntitySet Name="TBIL_ANN_POLICY_PREM_INFO" EntityType="Self.TBIL_ANN_POLICY_PREM_INFO" />
+    <EntitySet Name="tbil_CUST_detail" EntityType="ABS_LIFEDataModel.tbil_CUST_detail" />
+    <EntitySet Name="tbil_ins_detail" EntityType="ABS_LIFEDataModel.tbil_ins_detail" />
+  </EntityContainer>
+  <EntityType Name="tbil_CUST_detail">
+    <Key>
+      <PropertyRef Name="TBIL_CUST_ID" />
+      <PropertyRef Name="TBIL_CUST_CODE" />
+      <PropertyRef Name="TBIL_CUST_REC_ID" />
+    </Key>
+    <Property Name="TBIL_CUST_ID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_CODE" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_REC_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TBIL_CUST_CATG" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_MDLE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_DESC" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_SHRT_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_OCCUP_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_SOURCE_BIZ" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_BRANCH" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_ADRES1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_ADRES2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_PHONE1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_PHONE2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_EMAIL1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_EMAIL2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_STAFF_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_TAG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_CUST_KEYDTE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_CUST_OLD_NEW" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbil_ins_detail">
+    <Key>
+      <PropertyRef Name="TBIL_INSRD_ID" />
+      <PropertyRef Name="TBIL_INSRD_CODE" />
+      <PropertyRef Name="TBIL_INSRD_REC_ID" />
+    </Key>
+    <Property Name="TBIL_INSRD_ID" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_CODE" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_REC_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TBIL_INSRD_MDLE" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_CLASS" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_SURNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_FIRSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_ADRES1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_ADRES2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_PHONE1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_PHONE2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_EMAIL1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_EMAIL2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_CR_LIMIT" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TBIL_INSRD_OCCUP_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_SOURCE_BIZ" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_PAY_MODE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_BRNCH_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_TAG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TBIL_INSRD_KEYDTE" Type="DateTime" Precision="3" />
+    <Property Name="TBIL_INSRD_OLD_NEW" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

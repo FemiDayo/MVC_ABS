@@ -1,0 +1,530 @@
+﻿@model ABS.MODEL.Models.TBIL_ANN_POLICY_DET
+@{
+    ViewBag.Title = "Annuity - New Proposal";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<hr />
+<div id="topMenuDiv" class="bg-danger">
+    Top menu here
+</div>
+<p>
+    &nbsp;
+</p>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <table id="propTbl" class="table table-responsive table-hover form-group-sm">
+        <tr>
+            <td class="tdLbl">
+                <input type="checkbox" id="cbxFileNumber" class="" />
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_FILE_NO, "File Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_FILE_NO, new { htmlAttributes = new { @class = "form-control input-sm textInputMini", @disabled = "disabled" } })
+                    <a href="javascript:void()" id="getRecordBtn" class="btn btn-info btn-xs disabled">Get Record</a>
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_FILE_NO, "", new { @class = "text-danger" })
+                </div>
+
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_POLICY_NO, "Policy Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_POLICY_NO, new { htmlAttributes = new { @class = "form-control input-sm textInputMini", @disabled = "disabled" } })
+                    <a href="javascript:void()" id="getRecordBtn" class="btn btn-info btn-xs disabled">Get Record</a>
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_POLICY_NO, "", new { @class = "text-danger" })
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_PRPSAL_ISSUE_DATE, "Proposal Date", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_PRPSAL_ISSUE_DATE, new { htmlAttributes = new { @class = "form-control input-sm textInputMini" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_PRPSAL_ISSUE_DATE, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_PROPSAL_NO, "Proposal Number", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_PROPSAL_NO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_PROPSAL_NO, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_UNDW_YR, "UnderWriting Year", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_UNDW_YR, new { htmlAttributes = new { @class = "form-control input-sm textInputMini" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_UNDW_YR, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_SOURC_BIZ, "Business Source", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_SOURC_BIZ, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_SOURC_BIZ, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_MDLE, "Product Category", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_MDLE, new { htmlAttributes = new { @class = "form-control input-sm", @placeholder = "Annuity" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_MDLE, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_PRDCT_CD, "Product Code", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_PRDCT_CD, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_PRDCT_CD, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_COVER_CD, "Cover Code", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_COVER_CD, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_COVER_CD, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                @Html.LabelFor(model => model.TBIL_ANN_POLY_PLAN_CD, "Plan Code", htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_PLAN_CD, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_PLAN_CD, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Broker Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtBrokerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_CUST_CODE, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Marketer Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtMarketerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_AGCY_CODE, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchMarketer" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupMarketer" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="bg-warning">
+            <td class="tdLbl">
+                <label class="control-label">Assured Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtInsuredName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_CD, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Nationality</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_NATIONLTY, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Occupation Class</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_OCCUPATN, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Assured Occupation</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_OCCUTN_CLASS, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Gender</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.TBIL_ANN_POLY_GENDER, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Male", Value = "M"},
+                    new SelectListItem {Text = "Female", Value = "F"}
+                }, new
+                {
+                    @id = "gender",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_GENDER, "", new { @class = "text-danger" })
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Marital Status</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.TBIL_ANN_POLY_MARITAL, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Married", Value = "M"},
+                    new SelectListItem {Text = "Single", Value = "S"}
+                }, new
+                {
+                    @id = "maritalStatus",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_MARITAL, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Date Of Birth</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_BDATE, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text" } })
+                    <span class="label label-success">dd/mm/yyyy</span>
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_BDATE, "", new { @class = "text-danger" })
+
+                </div>
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Age (ANB)</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_AGE, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;", @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_AGE, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Place Of Birth</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_PLACE_BIRTH, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_PLACE_BIRTH, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Proof Of Age</label>
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.TBIL_ANN_POLY_AGE_PROOF, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Driver's Licence", Value = "D"},
+                    new SelectListItem {Text = "Passport", Value = "P"},
+                    new SelectListItem {Text = "National ID", Value = "N"},
+                    new SelectListItem {Text = "Voter's Card", Value = "V"}
+                }, new
+                {
+                    @id = "proofOfAge",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_AGE_PROOF, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Religion/Belief</label>
+            </td>
+            <td colspan="3">
+                @Html.DropDownListFor(model => model.TBIL_ANN_POLY_RELIGN_CD, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Christianity", Value = "C"},
+                    new SelectListItem {Text = "Islam", Value = "I"},
+                     new SelectListItem {Text = "Others", Value = "O"}
+                }, new
+                {
+                    @id = "religionBelief",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_RELIGN_CD, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Height</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_HEIGHT, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;" } })
+                    @Html.DropDownListFor(model => model.TBIL_ANN_POLY_ASSRD_HEIGHT_TYP, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Feet", Value = "F"},
+                    new SelectListItem {Text = "Meter", Value = "M"}
+                }, new
+                {
+                    @id = "height",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_HEIGHT, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_HEIGHT_TYP, "", new { @class = "text-danger" })
+                </div>
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Weight</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_ASSRD_WEIGHT, new { htmlAttributes = new { @class = "form-control input-sm", @style = "width:80px!important;" } })
+                    @Html.DropDownListFor(model => model.TBIL_ANN_POLY_ASSRD_WEIGHT_TYP, new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "--Select Item--", Value = "", Selected = false},
+                    new SelectListItem {Text = "Kilo", Value = "K"},
+                    new SelectListItem {Text = "Pound", Value = "P"}
+                }, new
+                {
+                    @id = "weight",
+                    @class = "form-control",
+                    @required = "required"
+                })
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_WEIGHT, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ASSRD_WEIGHT_TYP, "", new { @class = "text-danger" })
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">BUSINESS SOURCE INFO</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Branch</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_BRANCH_CD, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Department</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_DEPT_CD, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Proposal Status</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_PROPSL_ACCPT_STATUS, new { htmlAttributes = new { @class = "form-control  input-lg", @style = "width: 800px !important;" } })
+                    <button id="btnSearchInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                    <button id="btnSetupInsured" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-refresh"></i></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">RETIREMENT/RETIREE INFO</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Last Employer</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.TBIL_ANN_POLY_LAST_EMPLOYER, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_LAST_EMPLOYER, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Last Emp. Address</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.TBIL_ANN_POLY_LAST_EMPLOYER_ADRES, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_LAST_EMPLOYER_ADRES, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="bg-warning">
+            <td>
+                <label class="control-label">PFA Name/Code</label>
+            </td>
+            <td colspan="3">
+                <div class="form-inline">
+                    <input id="txtBrokerName" type="text" class="form-control input-lg" style="width: 800px !important;" />
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_RETIREE_PFA, new { htmlAttributes = new { @class = "form-control  input-sm textInputMini" } })
+                    <button id="btnSearchBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-search"></i></button>
+                    <button id="btnSetupBroker" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-cog"></i></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Last Occupation</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_RETIREE_OCCUP, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_RETIREE_OCCUP, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Bank Name</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_BANK_NAME, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_BANK_NAME, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Bank A/C Name</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_ACCOUNT_NAME, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ACCOUNT_NAME, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Account No</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_ACCOUNT_NO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_ACCOUNT_NO, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Bank Sort Code</label>
+            </td>
+            <td>
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_BANK_SORT_CODE, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_BANK_SORT_CODE, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                <label class="control-label">Bank Address</label>
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.TBIL_ANN_POLY_BANK_ADRES, 3, 40, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_BANK_ADRES, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">Retirement Date</label>
+            </td>
+            <td>
+                <div class="form-inline">
+                    @Html.EditorFor(model => model.TBIL_ANN_POLY_RETIREMENT_DATE, new { htmlAttributes = new { @class = "form-control input-sm", @type = "text" } })
+                    <span class="label label-success">dd/mm/yyyy</span>
+                </div>
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_RETIREMENT_DATE, "", new { @class = "text-danger" })
+
+            </td>
+            <td class="tdLbl">
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" class="bg-danger">
+                <label class="control-label">OTHER INFO</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdLbl">
+                <label class="control-label">
+                    Other Reference No
+                </label>
+            </td>
+            <td colspan="3">
+                @Html.EditorFor(model => model.TBIL_ANN_POLY_REF_NEW, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.TBIL_ANN_POLY_REF_NEW, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr class="">
+            <td colspan="2" align="left">
+                <input type="reset" value="Clear Fields" class="btn btn-info btn-sm" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Save Entry" class="btn btn-info btn-sm" />
+            </td>
+            <td colspan="2" align="right">
+                @*<button class="btn btn-info btn-sm">
+                        Clear Fields
+                    </button>*@
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="@Url.Content("~/")" class="btn btn-info btn-sm">
+                    Next
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+
+}

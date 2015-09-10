@@ -13,10 +13,10 @@ namespace ABS.MODEL.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ABS_LIFE_V2DbContext : DbContext
+    public partial class ABS_LIFEDbContext : DbContext
     {
-        public ABS_LIFE_V2DbContext()
-            : base("name=ABS_LIFE_V2DbContext")
+        public ABS_LIFEDbContext()
+            : base("name=ABS_LIFEDbContext")
         {
         }
     

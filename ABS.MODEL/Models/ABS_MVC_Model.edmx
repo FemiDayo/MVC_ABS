@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ABS_LIFEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ABS_LIFEDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TBIL_ANN_POLICY_BENEFRY">
           <Key>
             <PropertyRef Name="TBIL_ANN_BENF_REC_ID" />
@@ -224,7 +224,7 @@
           <Property Name="TBIL_INSRD_KEYDTE" Type="datetime" />
           <Property Name="TBIL_INSRD_OLD_NEW" Type="nvarchar" MaxLength="3" />
         </EntityType>
-        <EntityContainer Name="ABS_LIFEModelStoreContainer">
+        <EntityContainer Name="ABS_LIFEDataModelStoreContainer">
           <EntitySet Name="TBIL_ANN_POLICY_BENEFRY" EntityType="Self.TBIL_ANN_POLICY_BENEFRY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBIL_ANN_POLICY_DET" EntityType="Self.TBIL_ANN_POLICY_DET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBIL_ANN_POLICY_PREM_INFO" EntityType="Self.TBIL_ANN_POLICY_PREM_INFO" Schema="dbo" store:Type="Tables" />
@@ -234,7 +234,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ABS_LIFEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ABS_LIFEDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="TBIL_ANN_POLICY_BENEFRY">
           <Key>
             <PropertyRef Name="TBIL_ANN_BENF_REC_ID" />
@@ -395,12 +395,12 @@
           <Property Name="TBIL_ANN_POL_PRM_OPERID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="TBIL_ANN_POL_PRM_KEYDTE" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="ABS_LIFE_V2DbContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ABS_LIFEDbContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TBIL_ANN_POLICY_BENEFRY" EntityType="Self.TBIL_ANN_POLICY_BENEFRY" />
           <EntitySet Name="TBIL_ANN_POLICY_DET" EntityType="Self.TBIL_ANN_POLICY_DET" />
           <EntitySet Name="TBIL_ANN_POLICY_PREM_INFO" EntityType="Self.TBIL_ANN_POLICY_PREM_INFO" />
-          <EntitySet Name="tbil_CUST_detail" EntityType="ABS_LIFEModel.tbil_CUST_detail" />
-          <EntitySet Name="tbil_ins_detail" EntityType="ABS_LIFEModel.tbil_ins_detail" />
+          <EntitySet Name="tbil_CUST_detail" EntityType="ABS_LIFEDataModel.tbil_CUST_detail" />
+          <EntitySet Name="tbil_ins_detail" EntityType="ABS_LIFEDataModel.tbil_ins_detail" />
         </EntityContainer>
         <EntityType Name="tbil_CUST_detail">
           <Key>
@@ -466,9 +466,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ABS_LIFEModelStoreContainer" CdmEntityContainer="ABS_LIFE_V2DbContext">
+        <EntityContainerMapping StorageEntityContainer="ABS_LIFEDataModelStoreContainer" CdmEntityContainer="ABS_LIFEDbContext">
           <EntitySetMapping Name="TBIL_ANN_POLICY_BENEFRY">
-            <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_BENEFRY">
+            <EntityTypeMapping TypeName="ABS_LIFEDataModel.TBIL_ANN_POLICY_BENEFRY">
               <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_BENEFRY">
                 <ScalarProperty Name="TBIL_ANN_BENF_REC_ID" ColumnName="TBIL_ANN_BENF_REC_ID" />
                 <ScalarProperty Name="TBIL_ANN_BENF_FILE_NO" ColumnName="TBIL_ANN_BENF_FILE_NO" />
@@ -496,7 +496,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBIL_ANN_POLICY_DET">
-            <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_DET">
+            <EntityTypeMapping TypeName="ABS_LIFEDataModel.TBIL_ANN_POLICY_DET">
               <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_DET">
                 <ScalarProperty Name="TBIL_ANN_POLY_REC_ID" ColumnName="TBIL_ANN_POLY_REC_ID" />
                 <ScalarProperty Name="TBIL_ANN_POLY_FILE_NO" ColumnName="TBIL_ANN_POLY_FILE_NO" />
@@ -561,7 +561,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TBIL_ANN_POLICY_PREM_INFO">
-            <EntityTypeMapping TypeName="ABS_LIFEModel.TBIL_ANN_POLICY_PREM_INFO">
+            <EntityTypeMapping TypeName="ABS_LIFEDataModel.TBIL_ANN_POLICY_PREM_INFO">
               <MappingFragment StoreEntitySet="TBIL_ANN_POLICY_PREM_INFO">
                 <ScalarProperty Name="TBIL_ANN_POL_PRM_FILE_NO" ColumnName="TBIL_ANN_POL_PRM_FILE_NO" />
                 <ScalarProperty Name="TBIL_ANN_POL_PRM_REC_ID" ColumnName="TBIL_ANN_POL_PRM_REC_ID" />
@@ -629,7 +629,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbil_CUST_detail">
-            <EntityTypeMapping TypeName="ABS_LIFEModel.tbil_CUST_detail">
+            <EntityTypeMapping TypeName="ABS_LIFEDataModel.tbil_CUST_detail">
               <MappingFragment StoreEntitySet="tbil_CUST_detail">
                 <ScalarProperty Name="TBIL_CUST_OLD_NEW" ColumnName="TBIL_CUST_OLD_NEW" />
                 <ScalarProperty Name="TBIL_CUST_KEYDTE" ColumnName="TBIL_CUST_KEYDTE" />
@@ -657,7 +657,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbil_ins_detail">
-            <EntityTypeMapping TypeName="ABS_LIFEModel.tbil_ins_detail">
+            <EntityTypeMapping TypeName="ABS_LIFEDataModel.tbil_ins_detail">
               <MappingFragment StoreEntitySet="tbil_ins_detail">
                 <ScalarProperty Name="TBIL_INSRD_OLD_NEW" ColumnName="TBIL_INSRD_OLD_NEW" />
                 <ScalarProperty Name="TBIL_INSRD_KEYDTE" ColumnName="TBIL_INSRD_KEYDTE" />
